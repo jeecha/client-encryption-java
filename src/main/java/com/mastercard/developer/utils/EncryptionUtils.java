@@ -63,8 +63,8 @@ public final class EncryptionUtils {
             // OpenSSL / PKCS#1 Base64 PEM encoded file
             keyDataString = keyDataString.replace(PKCS_1_PEM_HEADER, "");
             keyDataString = keyDataString.replace(PKCS_1_PEM_FOOTER, "");
-            keyDataString = keyDataString.replace("\n", "");
             keyDataString = keyDataString.replace("\r\n", "");
+            keyDataString = keyDataString.replace("\n", "");
             return readPkcs1PrivateKey(base64Decode(keyDataString));
         }
 
@@ -72,8 +72,8 @@ public final class EncryptionUtils {
             // PKCS#8 Base64 PEM encoded file
             keyDataString = keyDataString.replace(PKCS_8_PEM_HEADER, "");
             keyDataString = keyDataString.replace(PKCS_8_PEM_FOOTER, "");
-            keyDataString = keyDataString.replace("\n", "");
             keyDataString = keyDataString.replace("\r\n", "");
+            keyDataString = keyDataString.replace("\n", "");
             return readPkcs8PrivateKey(base64Decode(keyDataString));
         }
 
